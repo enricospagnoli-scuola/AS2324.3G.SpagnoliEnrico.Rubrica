@@ -65,6 +65,31 @@ class Program
                         pos++;
                     } while (pos < cont);
                     break;
+                case 3:
+                    Console.Write("Inserire il nickname che si desidera cercare: ");
+                    string ricerca = Console.ReadLine();
+                    bool verifica = false;
+                    for (int y = 0; y < cont; y++)
+                    {
+                        if (ricerca == nicknames[y])
+                        {
+                            verifica = true;
+                            Console.WriteLine($"Persona/e trovata/e:");
+                            Console.WriteLine($"Nome: {nomi[y]}");
+                            Console.WriteLine($"Cognome: {cognomi[y]}");
+                            Console.WriteLine($"Nickname: {nicknames[y]}");
+                            Console.WriteLine($"Email: {emails[y]}");
+                            Console.WriteLine($"Anno di nascita: {anniNascita[y]}");
+                            Console.WriteLine($"Simpatia: {simpatie[y]}");
+                            Console.WriteLine("");
+                        }
+                    }
+                    if (verifica == false)
+                    {
+                        Console.WriteLine("Non sono state trovate persone.");
+                    }
+                    Console.WriteLine("");
+                    break;
                 case 9:
                     Console.WriteLine("Programma terminato.");
                     break;
