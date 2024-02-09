@@ -49,6 +49,22 @@ class Program
                     }
                     Console.WriteLine("");
                     break;
+                case 2:
+                    pos = 0;
+                    Console.WriteLine("Elenco nominativi:");
+                    do
+                    {
+                        Console.WriteLine($"Persona numero {pos + 1}:");
+                        Console.WriteLine($"Nome: {nomi[pos]}");
+                        Console.WriteLine($"Cognome: {cognomi[pos]}");
+                        Console.WriteLine($"Nickname: {nicknames[pos]}");
+                        Console.WriteLine($"Email: {emails[pos]}");
+                        Console.WriteLine($"Anno di nascita: {anniNascita[pos]}");
+                        Console.WriteLine($"Simpatia: {simpatie[pos]}");
+                        Console.WriteLine("");
+                        pos++;
+                    } while (pos < cont);
+                    break;
                 case 9:
                     Console.WriteLine("Programma terminato.");
                     break;
